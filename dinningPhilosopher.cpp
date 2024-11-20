@@ -1,3 +1,27 @@
+// monitor ForkMonitor:
+// integer array[0..4]
+// fork ← [2,2,2,2,2]                                                       
+// condition array[0..4]OKtoEat
+
+// operation takeForks(integer i)                  
+// if(fork[i]!=2)
+// waitC(OKtoEat[i])
+
+// fork[i+1] <- fork[i+1]-1
+// fork[i-1] <- fork[i-1]-1   
+
+// operation releaseForks(integer i)
+// fork[i+1] <- fork[i+1]+1
+// fork[i-1] <- fork[i-1]
+
+// if(fork[i+1]==2)
+// signalC(OKtoEat[i+1])
+         
+// if(fork[i-1]==2)
+// signalC(OKtoEat[i-1])
+
+
+
 // Header file include
 #include <bits/stdc++.h>
 #include <pthread.h>
